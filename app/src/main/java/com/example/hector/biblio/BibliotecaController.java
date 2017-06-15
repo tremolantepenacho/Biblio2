@@ -13,22 +13,32 @@ public class BibliotecaController {
     private Activity main;
     private BibliotecaOpenHelper dbh;
 
-    BibliotecaController (Activity main){
-        this.main=main;
+    BibliotecaController(Activity main) {
+        this.main = main;
         dbh = new BibliotecaOpenHelper(main, "dbBiblioteca", null, 1);
 
     }
-    public int autentificaUsuario(String nombre,String password){
 
-        SQLiteDatabase db=dbh.getReadableDatabase();
-        String[] campos=new String[] {"_id"};
-        String[] args=new String[] {nombre,password};
-        Cursor res=db.query("usuario",campos,"nombre=? AND password=?",args,null,null,null);
-        if (res==null || res.getCount()==0) {
+    public int authenticateUser(String nombre, String password) {
+
+        SQLiteDatabase db = dbh.getReadableDatabase();
+        String[] campos = new String[]{"_id"};
+        String[] args = new String[]{nombre, password};
+        Cursor res = db.query("usuario", campos, "nombre=? AND password=?", args, null, null, null);
+        if (res == null || res.getCount() == 0) {
             return 0;
-        }
-        else {
+        } else {
             return res.getInt(0);
+        }
+    }
+
+    public void addUser(String name, String pass, boolean male) {
+
+        SQLiteDatabase db = dbh.getWritableDatabase();
+        if (male) {
+            db.execSQL("INSERT INTO usuario ('nombre','password','genero') VALUES (" + name + "," + pass + ",'M');");
+        } else {
+            db.execSQL("INSERT INTO usuario ('nombre','password','genero') VALUES (" + name + "," + pass + ",'F');");
         }
     }
 }

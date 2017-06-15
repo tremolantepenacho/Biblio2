@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 
 //startActivity(new Intent(this, InsertaPlatoActivity.class));
 
@@ -32,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText editUser = (EditText) findViewById(R.id.editUser);
                 EditText editPass = (EditText) findViewById(R.id.editPass);
-                int id = controlador.autentificaUsuario(editUser.toString(), editPass.toString());
+                int id = controlador.authenticateUser(editUser.toString(), editPass.toString());
                 if (id!=0){
                     startActivity(new Intent(main, WellcomeActivity.class));
                 }

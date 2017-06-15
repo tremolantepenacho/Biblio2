@@ -2,6 +2,13 @@
     <string name="app_name">Biblio</string>
     <string name="textUser">Nombre de usuario</string>
     <string name="textPass">Contraseña</string>
-    <string name="textSignUp">Date de alta</string>
+    <string name="textSignUp"><u>Date de alta</u></string>
     <string name="buttonLogin">Login</string>
+    <string name="textNameNew">Nombre de usuario:</string>
+    <string name="textPassNew">Contraseña:</string>
+    <string name="textPassRepeatNew">Repite la contraseña:</string>
+    <string name="radioButtonMaleNew">Hombre</string>
+    <string name="radioButtonFemaleNew">Mujer</string>
+    <string name="textGender">Sexo:</string>
+    <string name="buttonEnviar">Enviar</string>
 </resources>

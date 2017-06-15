@@ -13,7 +13,8 @@ public class BibliotecaOpenHelper extends SQLiteOpenHelper {
     private static final String sql = "create table usuario " +
             "(_id integer PRIMARY KEY AUTOINCREMENT, " +
             "nombre text not null, " +
-            "password text not null);";
+            "password text not null," +
+            "genero char(1) not null);";
 
 
     public BibliotecaOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {

@@ -4,8 +4,85 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textNameNew"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nuevo usuario" />
+        android:text="@string/textNameNew"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:id="@+id/editNameNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/textPassNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textPassNew"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:id="@+id/editPassNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/textPassRepeatNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textPassRepeatNew"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:id="@+id/editPassRepeatNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/textGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textGender"
+        android:layout_margin="5dp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonMaleNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/radioButtonMaleNew" />
+
+        <RadioButton
+            android:id="@+id/radioFemaleNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="@string/radioButtonFemaleNew" />
+
+        </RadioGroup>
+
+
+    <Button
+        android:id="@+id/buttonEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Button" />
 </LinearLayout>
