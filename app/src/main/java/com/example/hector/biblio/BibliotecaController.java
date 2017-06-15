@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.io.Serializable;
+
 /**
  * Created by hector on 14/06/17.
  */
 
-public class BibliotecaController {
+public class BibliotecaController implements Serializable {
 
     private Activity main;
     private BibliotecaOpenHelper dbh;
@@ -40,5 +42,17 @@ public class BibliotecaController {
         } else {
             db.execSQL("INSERT INTO usuario ('nombre','password','genero') VALUES (" + name + "," + pass + ",'F');");
         }
+    }
+
+    public void mensaje(){
+        System.out.println("************************************");
+        System.out.println("************************************");
+        System.out.println("************************************");
+        System.out.println("************************************");
+        System.out.println("************************************");
+        System.out.println("************************************");
+        System.out.println("************************************");
+        System.out.println("************************************");
+        System.out.println("************************************");
     }
 }

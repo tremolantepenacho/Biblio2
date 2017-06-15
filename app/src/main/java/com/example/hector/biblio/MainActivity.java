@@ -32,7 +32,10 @@ public class MainActivity extends AppCompatActivity {
                 EditText editPass = (EditText) findViewById(R.id.editPass);
                 int id = controlador.authenticateUser(editUser.toString(), editPass.toString());
                 if (id!=0){
-                    startActivity(new Intent(main, WellcomeActivity.class));
+                    //startActivity(new Intent(main, WellcomeActivity.class));
+                    Intent intent = new Intent(main, WellcomeActivity.class);
+                    intent.putExtra("controlador", controlador);
+                    startActivity(intent);
                 }
 
             }
